@@ -47,11 +47,56 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-        .project img {
-            width: 40%;
+        .button, .download-link {
+            display: inline-block;
+            background-color: #f2f4f5;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .button:hover, .download-link:hover {
+            background-color: #e0e2e3;
+        }
+        .process-step {
+            margin-bottom: 20px;
+        }
+        .process-step h3 {
+            margin: 10px 0;
+        }
+        .process-step p {
+            margin: 5px 0;
+        }
+        .process-step a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .process-step a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        img {
+            width: 80%;
             height: auto;
             display: block;
-            margin: 0 auto 10px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -67,26 +112,90 @@
     </header>
     <div class="container">
         <div class="section">
-            <h2>暴躁记账介绍</h2>
-            <p>暴躁记账的文字介绍。</p>
-            <p>获取暴躁记账免费版：<a href="[暴躁记账免费版链接]" target="_blank">点击获取</a></p>
-            <p>获取暴躁记账付费版：<a href="[暴躁记账付费版链接]" target="_blank">点击获取</a></p>
-        </div>
+            <h2>记账使用流程</h2>
+            <div class="process-step">
+                <p>首先感谢您对我们的支持，接下来请您按照以下流程进行快捷指令的设置，若在操作过程中遇到问题，可以联系群主帮您解决，人手有限，可能回复不及时，请您耐心等待，每一个问题我们都会认真处理。</p>
+                <h3>1. 下载记账模板</h3>
+                <p>首先，请您确认您正在使用苹果Safari浏览器打开本网页，我们为您提供了以下基础版本的记账模板。</p>
+                <a href="123456.xls" class="button" download>下载文件</a>
+                <h4>免费表格模板1.0</h4>
+                <p>说明：已进行基础设置，可搭配自动记账快捷指令使用。</p>
+                <h4>付费表格模板2.0</h4>
+                <p>说明：新增年度页面，月度页面，辅助页面，包含：年度收入、年度支出、月度预算、收支类目汇总。</p>
+                <a href="https://www.xiaohongshu.com/goods-detail/65943b764207d3000193cba1?xhsshare=CopyLink&appuid=62ef95af000000001f014239&apptime=1704541714" class="download-link" target="_blank">购买链接</a>
+                <p>使用移动设备下载以上文件可能会出现文件名显示为乱码的情况，不用担心，这是正常的，您可以将文件重命名。点击下载时，文件名会变成乱码，这是正常的，直接点击下载即可。下载完成后点击地址栏左侧的蓝色箭头，找到“下载”选项，就可以查看到刚才下载的文件了。</p>
 
-        <div class="section">
-            <h2>暴躁记账使用流程</h2>
-            <img src="http://www.archcollege.com/wp-content/uploads/2024/07/1722386305962539.jpg" alt="使用流程图">
-            <p>暴躁记账使用流程的图文介绍。</p>
-        </div>
+                <h3>2. 设置记账模板</h3>
+                <p>您可以在Safari浏览器中点击教程视频链接，在打开的页面中点击“添加快捷指令”，即可将指令保存到您的设备中。</p>
+                <p>您可以查看<a href="https://www.xiaohongshu.com/explore/6565f57900000000330046dc" target="_blank">教程视频</a>，跟着视频完成记账模板的设置。</p>
+                <p>当然，如果您遇到了问题，可以联系群主咨询。</p>
+                <h3>3. 获取快捷指令</h3>
+                <h4>1.2.1版本（免费）:</h4>
+                <p>说明：指令更新，当选择“支出”时，记录数字为负</p>
+                <a href="https://www.icloud.com/shortcuts/55a525dc5cba4790aaba90d30de0b93e" class="download-link" target="_blank">获取链接</a>
+                <h3>4. 设置快捷指令</h3>
+                <p>在您的快捷指令列表中，找到您刚刚保存的快捷指令，点击右上角的三个点，即可进入设置。</p>
+                <p>您可以根据<a href="https://www.xiaohongshu.com/explore/65692514000000003202d7df" target="_blank">教程视频</a>完成指令的设置。</p>
+                <h3>5. 快捷指令的启动</h3>
+                <p>目前有两种比较推荐的启动方式：<strong>轻点背部</strong>、<strong>辅助触控</strong>。</p>
+                <p>您可以按照自己的习惯选择一种，并按照下方的问题提示进行操作，在最后一步选择您设置好的快捷指令即可。</p>
+                <p><strong>轻点背部</strong>：设置-辅助功能-触控-轻点背部</p>
+                <p><strong>辅助触控按钮</strong>：设置-辅助功能-触控-辅助触控-自定义顶层菜单</p>
+                <p>接下来，您就可以在账单页面运行快捷指令尝试自动记账了，若您在使用中遇到了问题，或者对我们的快捷指令及记账模板有宝贵的意见与建议，也欢迎随时联系我们，期待您的声音！</p>
 
-        <div class="section">
-            <h2>文件下载</h2>
-            <p>点击下方链接下载暴躁记账相关文件：</p>
-            <a href="123456.xls" download="123456.xls">下载暴躁记账专属模板</a>
+            </div>
+            <h2>功能对比</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>功能</th>
+                        <th>1.2.1免费版本</th>
+                        <th>2.0付费版本</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>识别金额</td>
+                        <td>有</td>
+                        <td>有</td>
+                    </tr>
+                    <tr>
+                        <td>填写备注</td>
+                        <td>有</td>
+                        <td>有</td>
+                    </tr>
+                    <tr>
+                        <td>支出金额为负</td>
+                        <td>有</td>
+                        <td>有</td>
+                    </tr>
+                    <tr>
+                        <td>识别卡尾号</td>
+                        <td></td>
+                        <td>有</td>
+                    </tr>
+                    <tr>
+                        <td>识别交易日期</td>
+                        <td></td>
+                        <td>有</td>
+                    </tr>
+                    <tr>
+                        <td>识别支付宝、微信账户（有误差）</td>
+                        <td></td>
+                        <td>有</td>
+                    </tr>
+                    <tr>
+                        <td>微信、支付宝页面跳回（有误差）</td>
+                        <td></td>
+                        <td>有</td>
+
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <footer>
-        <p>版权所有 &copy; 2024</p>
+        <p>© 2024 暴躁记账. 版权所有.</p>
     </footer>
 </body>
 </html>
