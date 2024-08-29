@@ -47,14 +47,54 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
-        .project {
-            margin-bottom: 15px;
+        .carousel {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 8px;
         }
-        .project img {
-            width: 40%;
-            height: auto;
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 自动裁剪以保证图片尺寸 */
+            display: none;
+        }
+        .carousel img.active {
             display: block;
-            margin: 0 auto 10px;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .carousel-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* 按钮样式 */
+        .button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -69,31 +109,68 @@
         </nav>
     </header>
     <div class="container">
-        <div class="section">
-            <h2>欢迎来到我的个人主页</h2>
-            <p>你好，我是[你的名字]。欢迎浏览我的个人网站。</p>
+        <!-- 轮播图部分 -->
+        <div class="section" id="carousel-section">
+            <h2>轮播图展示</h2>
+            <div class="carousel">
+                <img src="https://i.pinimg.com/236x/06/17/eb/0617eb2ca420af4bd19c0edc1aa4d197.jpg" class="active" alt="Image 1">
+                <img src="https://i.pinimg.com/236x/2f/37/44/2f3744ba0633ff5be876bdfb9f4ea626.jpg" alt="Image 2">
+                <img src="https://i.pinimg.com/236x/06/17/eb/0617eb2ca420af4bd19c0edc1aa4d197.jpg" alt="Image 3">
+                
+                <!-- 轮播图控制按钮 -->
+                <div class="carousel-controls">
+                    <button id="prev">&#10094;</button>
+                    <button id="next">&#10095;</button>
+                </div>
+            </div>
         </div>
 
+        <!-- 主页其他内容 -->
         <div class="section">
             <h2>关于我</h2>
-            <p>关于我的简要介绍。</p>
-            <a href="about.html">查看详细信息</a>
+            <p>简要介绍... <a href="about.html" class="button">查看详情</a></p>
         </div>
 
         <div class="section">
             <h2>暴躁记账</h2>
-            <p>关于暴躁记账的介绍。</p>
-            <a href="budget.html">查看详细信息</a>
+            <p>暴躁记账介绍... <a href="budget.html" class="button">查看详情</a></p>
         </div>
 
         <div class="section">
             <h2>暴躁日程</h2>
-            <p>暴躁日程的介绍。</p>
-            <a href="schedule.html">查看详细信息</a>
+            <p>暴躁日程介绍... <a href="schedule.html" class="button">查看详情</a></p>
         </div>
     </div>
     <footer>
         <p>版权所有 &copy; 2024</p>
     </footer>
+
+    <!-- JavaScript 实现轮播图功能 -->
+    <script>
+        const images = document.querySelectorAll('.carousel img');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+            showImage(currentIndex);
+        });
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            showImage(currentIndex);
+        });
+
+        // 自动播放轮播图（可选）
+        setInterval(() => {
+            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+            showImage(currentIndex);
+        }, 3000); // 每3秒自动切换
+    </script>
 </body>
 </html>
