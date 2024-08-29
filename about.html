@@ -47,6 +47,25 @@
             border: 1px solid #ddd;
             border-radius: 4px;
         }
+        .diary-entry {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .btn-view {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.8em;
+            text-align: center;
+        }
+        .btn-view:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -60,11 +79,38 @@
         </nav>
     </header>
     <div class="container">
-        <div class="section">
-            <h2>关于我</h2>
-            <p>你好，我是[你的名字]，一个[你的职业或角色]。我有丰富的[你的专业领域]经验，热爱[你的兴趣或爱好]。</p>
-            <p>我的小红书账号：<a href="[小红书账号链接]" target="_blank">点击查看</a></p>
-            <p>微信公众号：<a href="[微信公众号链接]" target="_blank">点击查看</a></p>
+        <!-- 个人简介部分 -->
+        <div class="section" id="personal-intro">
+            <h2>个人简介</h2>
+            <p>这里是关于我的详细介绍...</p>
+        </div>
+
+        <!-- 社交媒体部分 -->
+        <div class="section" id="social-media">
+            <h2>社交媒体</h2>
+            <p>小红书: <a href="https://www.xiaohongshu.com" target="_blank">点击查看</a></p>
+            <p>微信公众号: <a href="https://weixin.qq.com" target="_blank">点击查看</a></p>
+        </div>
+
+        <!-- 日记专栏部分 -->
+        <div class="section" id="diary-section">
+            <h2>日记专栏</h2>
+
+            <!-- 日记条目 -->
+            <div class="diary-entry">
+                <h3>记账的5个意想不到的优点</h3>
+                <p>记账不仅仅是为了追踪开支，它还能帮助建立财务意识、减少不必要的开支、明确理财目标、增强财务安全感，并提升生活质量。点击下方按钮查看完整文章。</p>
+                <a class="btn-view" href="文章/diary1.html">查看详情</a>
+            </div>
+
+            <div class="diary-entry">
+                <h3>记账的500个意想不到的优点</h3>
+                <p>记账不仅仅是为了追踪开支，它还能帮助建立财务意识、减少不必要的开支、明确理财目标、增强财务安全感，并提升生活质量。点击下方按钮查看完整文章。</p>
+                <a class="btn-view" href="文章/diary2.html">查看详情</a>
+            </div>
+
+            <!-- 这里可以添加更多日记条目 -->
+
         </div>
     </div>
     <footer>
